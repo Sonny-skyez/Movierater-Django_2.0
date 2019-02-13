@@ -1,0 +1,17 @@
+body {
+    color: #444;
+    padding: 50px;
+}
+
+img {
+    width: 150px;
+    float: left;
+}
+
+.card {
+    width: 700px;
+}
+
+.desc {
+    margin-left: 15px;
+}

@@ -1,0 +1,22 @@
+{% extends 'glowny.html' %}
+
+{% load bootstrap %}
+
+{% block title %}Zapisz film {% endblock %}
+
+{% block body  %}
+
+    <div class="card" style="width: 600px;">
+      <div class="card-body">
+          <h5 class="card-title">Zapisz film</h5>
+        <form role="role" method= "post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|bootstrap }}
+            <a href="{% url 'wszystkie_filmy' %}">Cofnij  <i class="fas fa-arrow-circle-left"></i>
+            <button type="submit" class="btn btn-primary">Zapisz  <i class="fas fa-plus-circle"></i></button>
+
+        </form>
+      </div>
+    </div>
+
+{% endblock %}

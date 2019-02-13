@@ -1,0 +1,17 @@
+{% extends 'glowny.html' %}
+
+{% block title %}Potwierdz {% endblock %}
+
+{% block body  %}
+
+    <div class="alert alert-danger" role="alert">
+        Czy napewno chcesz usunac film {{ film.name }} ??
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+            <a href="{% url 'wszystkie_filmy' %}">Cofnij  <i class="fas fa-arrow-circle-left"></i>
+            <button type="submit" class="btn btn-danger">Tak <i class="fas fa-trash-alt"></i></button>
+    </form>
+
+{% endblock %}
