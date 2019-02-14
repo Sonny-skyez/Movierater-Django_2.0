@@ -9,7 +9,7 @@
     <div class="jumbotron">
       <h1 class="display-4">
           {% if user.is_authenticated %}
-            Witam {{ user.username }}<br>
+            Witam {{ user.username }}
             <a class="btn btn-primary btn" href="{% url 'logout' %}">logout</a>
           {% else %}
           Movie Rater App
