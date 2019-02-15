@@ -16,4 +16,8 @@ urlpatterns = [
     path('edytuj/<int:id>/', edytuj_film, name = 'edytuj_film'),
     path('usun/<int:id>/', usun_film, name = 'usun_film'),
     path('', include(router.urls)),
+    path('', include(router.urls)),
 ]
+
+
+# path('', include(router.urls)),
