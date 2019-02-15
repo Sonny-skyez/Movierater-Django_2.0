@@ -1,7 +1,7 @@
-from django.urls import path
 from .views import wszystkie_filmy, nowy_film, edytuj_film, usun_film
 
-from django.urls import include, path
+from django.urls import path
+from django.conf.urls import url, include
 from rest_framework import routers
 from .views import UserViewSet, MovieViewSet
 
@@ -15,9 +15,9 @@ urlpatterns = [
     path('nowy/', nowy_film, name = 'nowy_film'),
     path('edytuj/<int:id>/', edytuj_film, name = 'edytuj_film'),
     path('usun/<int:id>/', usun_film, name = 'usun_film'),
-    path('', include(router.urls)),
-    path('', include(router.urls)),
+    url(r'^', include(router.urls)),
 ]
+
 
 
 # path('', include(router.urls)),
