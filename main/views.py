@@ -5,24 +5,7 @@ from .forms import MovieForm
 from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth.models import User
-from rest_framework import viewsets
-from .serializers import UserSerializer, MovieSerializer
 
-
-class UserViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows users to be viewed or edited.
-    """
-    queryset = User.objects.all().order_by('-date_joined')
-    serializer_class = UserSerializer
-
-
-class MovieViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows users to be viewed or edited.
-    """
-    queryset = Movie.objects.all()
-    serializer_class = MovieSerializer
 
 
 # Create your views here.

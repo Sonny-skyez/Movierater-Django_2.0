@@ -3,11 +3,9 @@ from .views import wszystkie_filmy, nowy_film, edytuj_film, usun_film
 from django.urls import path
 from django.conf.urls import url, include
 from rest_framework import routers
-from .views import UserViewSet, MovieViewSet
+
 
 router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
-router.register(r'movies', MovieViewSet)
 
 
 urlpatterns = [

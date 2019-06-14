@@ -1,21 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
-class ExtraInfo(models.Model):
-
-    # one-to-one
-    RODZAJE = {
-        (0, 'Nieznany'),
-        (1, 'Horror'),
-        (2, 'Komedia'),
-        (3, 'Sci-Fi'),
-        (4, 'Dramat')
-
-    }
-    czas_trwania = models.IntegerField(default=0)
-    rodzaj = models.IntegerField(default=0, choices=RODZAJE)
-
 
 class Movie(models.Model):
 
@@ -25,7 +9,7 @@ class Movie(models.Model):
     released = models.DateField(null=True, blank=True)
     imdb_rating = models.DecimalField(null=True, blank=True, decimal_places=7, max_digits=10)
     photo = models.ImageField(null=True, blank=True, upload_to= 'plakaty')
-    info = models.OneToOneField(ExtraInfo, on_delete=models.CASCADE)
+
 
     def __str__(self):
         return self.name_with_year()
