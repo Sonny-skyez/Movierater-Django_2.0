@@ -1,6 +1,6 @@
 body {
     padding: 50px;
-    background-color: grey;
+    background-color: #cccccc;
 }
 
 img {
@@ -14,4 +14,16 @@ img {
 
 .desc {
     margin-left: 15px;
+}
+
+.jumbotron {
+    background-color: #a6a6a6;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
 }

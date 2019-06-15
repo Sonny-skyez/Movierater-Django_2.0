@@ -6,20 +6,22 @@
 
 {% block body %}
 
+
     <div class="jumbotron">
       <h1 class="display-4">
           {% if user.is_authenticated %}
             Witam {{ user.username }}
-            <a class="btn btn-primary btn" href="{% url 'logout' %}">logout</a>
+            <a class="btn btn-light btn" href="{% url 'logout' %}">logout</a>
           {% else %}
           Movie Rater App
-            <a class="btn btn-primary btn" href="{% url 'login' %}">login</a>
+            <a class="btn btn-light btn" href="{% url 'login' %}">login</a>
           {% endif %}
 
       </h1>
-        <hr class="my-4">
-        <h2>Lista filmow</h2>
-
+        <hr class="my-3">
+        <h2>Lista polecanych filmów:
+        <a class="btn btn-light" href="{% url 'admin:index' %}"><i class="fas fa-users-cog"></i> Admin</a>
+        </h2>
     </div>
 
 
