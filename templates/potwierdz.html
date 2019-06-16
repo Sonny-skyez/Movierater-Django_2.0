@@ -4,14 +4,15 @@
 
 {% block body  %}
 
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-warning" role="alert">
         Czy napewno chcesz usunac film {{ film.name }} ??
     </div>
 
     <form method="post">
         {% csrf_token %}
-            <a href="{% url 'wszystkie_filmy' %}">Cofnij  <i class="fas fa-arrow-circle-left"></i>
-            <button type="submit" class="btn btn-danger">Tak <i class="fas fa-trash-alt"></i></button>
+            <a href="{% url 'wszystkie_filmy' %}" style="color: #FDF3CF; margin-left: 10px">Cofnij
+                <i class="fas fa-arrow-circle-left" style="color:#FDF3CF"></i>
+            <button type="submit" class="btn btn-light" style="margin-left: 10px">Tak <i class="fas fa-trash-alt"></i></button>
     </form>
 
 {% endblock %}
