@@ -128,10 +128,11 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.1/howto/static-files/
+
 
 AWS_DEFAULT_ACL = None
+
+AWS_S3_REGION_NAME = 'eu-west-3'
 
 AWS_ACCESS_KEY_ID = 'AKIAJCVEHLJWCWAFHXGQ'
 AWS_SECRET_ACCESS_KEY = '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'
