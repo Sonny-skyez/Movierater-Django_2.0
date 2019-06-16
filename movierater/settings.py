@@ -153,9 +153,9 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 
-MEDIA_URL = '/static/'
+MEDIA_URL = '/media/'
 
-MEDIA_ROOT = 'static'
+MEDIA_ROOT = 'media'
 
 LOGIN_URL = 'login'
 
