@@ -6,7 +6,7 @@ class Movie(models.Model):
     name = models.CharField(max_length=128)
     description = models.TextField(default='', blank=True, null=True)
     year = models.CharField(null=True, blank=True, max_length=4)
-    photo = models.ImageField(null=True, blank=True, default='blank.jpg')
+    photo = models.FileField(null=True, blank=True, default='blank.jpg')
 
 
     def __str__(self):

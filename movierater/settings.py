@@ -154,15 +154,8 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
-
 DEFAULT_FILE_STORAGE = 'movierater.storage_backends.MediaStorage'
 
-
-
-
-MEDIA_URL = 'https://sonny-skyez.s3.amazonaws.com/media/'   #TODO
-
-# MEDIA_ROOT = 'media'
 
 LOGIN_URL = 'login'
 
