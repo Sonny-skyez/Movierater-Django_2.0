@@ -131,6 +131,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+AWS_DEFAULT_ACL = None
 
 AWS_ACCESS_KEY_ID = 'AKIAJCVEHLJWCWAFHXGQ'
 AWS_SECRET_ACCESS_KEY = '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'
@@ -152,9 +153,9 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/static/'
 
-MEDIA_ROOT = 'media'
+MEDIA_ROOT = 'static'
 
 LOGIN_URL = 'login'
 
