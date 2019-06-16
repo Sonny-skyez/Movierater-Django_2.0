@@ -1,31 +1,38 @@
 {% extends 'glowny.html' %}
 {% load bootstrap %}
 {% load static %}
- {% block title %} Lista filmow {% endblock %}
+ {% block title %} Movie Rater - index {% endblock %}
 
 {% block body %}
 
+    <a class="btn btn-light" href="{% url 'admin:index' %}"><i class="fas fa-users-cog"></i> Admin</a>
 
     <div class="jumbotron">
       <h1 class="display-4">
           {% if user.is_authenticated %}
-            Witam {{ user.username }}
-            <a class="btn btn-light btn" href="{% url 'logout' %}">logout</a>
+
+              Witam, {{ user.username }}
+            <a class="btn btn-light btn-lg" href="{% url 'logout' %}" style="margin-left: 30px">Wyloguj się</a>
+
           {% else %}
-          Movie Rater App
-            <a class="btn btn-light btn" href="{% url 'login' %}">login</a>
+
+            Movie Rater App
+            <a class="btn btn-light btn-lg" href="{% url 'login' %}" style="margin-left: 30px">Zaloguj się</a>
+
           {% endif %}
 
       </h1>
         <hr class="my-3">
-        <h2>Lista polecanych filmów:
-        <a class="btn btn-light" href="{% url 'admin:index' %}"><i class="fas fa-users-cog"></i> Admin</a>
+        <h2>Aplikacja służąca do dodawania pozycji filmowych wraz z ich recenzją/opisem, datą premiery
+            oraz artworkami! Have fun!
         </h2>
     </div>
 
 
-    <a href="{% url 'nowy_film' %}"><i class="btn btn-secondary btn-lg btn-block"
-                                   style="width: 700px; margin-bottom:10px;">+ Nowy film</i></button>
+    <a href="{% url 'nowy_film' %}" class="btn btn-secondary btn-lg btn-block" style=
+            "width: 700px; margin-bottom:10px;"><i class="fas fa-plus-square" style=
+            "margin-right: 10px"></i> Dodaj film <i class="fas fa-plus-square" style=
+            "margin-left: 10px"></i></a>
 
 
         {% for film in filmy %}
