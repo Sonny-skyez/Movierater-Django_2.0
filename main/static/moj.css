@@ -58,3 +58,8 @@ h3 {
     margin-left: auto;
     margin-right:auto;
 }
+
+.alert {
+    margin-left: 30px;
+    margin-right: 30px;
+}
