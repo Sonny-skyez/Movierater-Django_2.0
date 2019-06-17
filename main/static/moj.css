@@ -81,3 +81,13 @@ h3 {
 a:hover {
     color: #FCC127;
 }
+
+.reccomend {
+    margin-left: auto;
+    margin-right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #FCC127;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px #ff9933;
+}

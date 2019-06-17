@@ -4,14 +4,14 @@
 
 {% block body  %}
 
-    <div class="alert alert-warning" role="alert" style="margin-top: 50px">
-        Czy napewno chcesz usunac film {{ film.name }} ??
+    <div class="alert alert-light" role="alert" style="margin-top: 50px; background-color: #FCC127; color: black">
+        Czy napewno chcesz usunac film {{ film.name }} ?
     </div>
 
     <form method="post" style="margin-bottom: 300px">
         {% csrf_token %}
-            <a href="{% url 'wszystkie_filmy' %}" style="color: #fef9e7; margin-left: 50px">Cofnij
-                <i class="fas fa-arrow-circle-left" style="color:#fef9e7"></i></a>
+            <a href="{% url 'wszystkie_filmy' %}" style="color: white; margin-left: 50px;">Cofnij
+                <i class="fas fa-arrow-circle-left" style="color:white"></i></a>
             <button type="submit" class="btn btn-light" style="margin-left: 10px;">Tak <i class="fas fa-trash-alt"></i></button>
     </form>
 

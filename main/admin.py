@@ -5,7 +5,7 @@ from .models import Movie
 class MovieAdmin(admin.ModelAdmin):
     # fields = ('name', 'description', 'year')
     list_display = ('name', 'description', 'year')
-    list_filter = ['year','name']
+    list_filter = ['year','reccomendation', 'name']
     search_fields = ('name', 'description')
 
 
