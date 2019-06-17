@@ -91,3 +91,7 @@ a:hover {
     letter-spacing: 2px;
     text-shadow: 1px 1px #ff9933;
 }
+
+.card-body {
+    background-color: #f2f2f2;
+}
