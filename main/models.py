@@ -31,5 +31,3 @@ class Movie(models.Model):
     def reccomend_movie(self):
         if self.reccomendation:
             return self.reccomendation
-        else:
-            return None
