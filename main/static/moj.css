@@ -67,3 +67,17 @@ h3 {
 .row {
     padding-left: 15px;
 }
+
+.footer_links {
+    color: black;
+    font-weight: bold;
+}
+
+.c_footer {
+    color: black;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #FCC127;
+}
