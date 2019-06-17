@@ -40,12 +40,12 @@ h3 {
     margin-right: auto;
 }
 
-.grey-background
-    {background-color:#a6a6a6;
+.grey-background {
+    background-color: #a6a6a6;
 }
 
 .white {
-    color:#ffffff;
+    color: #ffffff;
 }
 
 .navbar {
@@ -62,4 +62,8 @@ h3 {
 .alert {
     margin-left: 30px;
     margin-right: 30px;
+}
+
+.row {
+    padding-left: 15px;
 }

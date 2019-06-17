@@ -30,7 +30,7 @@
     </div>
 
 
-    <a href="{% url 'nowy_film' %}" class="btn btn-secondary grey-background white btn-lg btn-block">
+    <a href="{% url 'nowy_film' %}" class="btn btn-warning btn-lg btn-block">
             <i class="fas fa-plus-square" style=
             "margin-right: 10px"></i> Dodaj film <i class="fas fa-plus-square" style=
             "margin-left: 10px"></i></a>
@@ -45,15 +45,15 @@
                   <img src="{{ film.photo.url }}">
 
                       <div class="row">
-                          <div class="col-sm-9">
+                          <div class="col-sm-11">
                               <h3>{{film}}</h3>
                           </div>
-                          <div class="col-sm-3">
-                              <a href="{% url 'edytuj_film' film.id %}"><i class="fas fa-edit"></i></a>
-                              <a href="{% url 'usun_film' film.id %}"><i class="fas fa-trash-alt"></i></a>
+                          <div class="col-sm-1">
+                              <a href="{% url 'edytuj_film' film.id %}"><i class="fas fa-edit" style="color:#666666"></i></a>
+                              <a href="{% url 'usun_film' film.id %}"><i class="fas fa-trash-alt" style="color:#666666"></i></a>
                           </div>
                       </div>
-                      <div class="row">
+                      <div class="row" style="padding-right: 30px">
 
                           <p class="desc">{{ film.description }}</p>
 
