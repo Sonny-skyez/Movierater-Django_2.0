@@ -7,3 +7,6 @@ class MovieAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'year')
     list_filter = ['year','name']
     search_fields = ('name', 'description')
+
+
+admin.site.site_url = "/main/filmy"
