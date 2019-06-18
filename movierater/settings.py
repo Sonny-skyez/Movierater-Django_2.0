@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = ['movie-rater-app.herokuapp.com', 'sonny-skyez.herokuapp.com', 'movie-rater-web.herokuapp.com', 'localhost:8000', '127.0.0.1']
 
@@ -135,8 +135,8 @@ AWS_DEFAULT_ACL = None
 
 AWS_S3_REGION_NAME = 'eu-west-3'
 
-AWS_ACCESS_KEY_ID = 'AKIAJCVEHLJWCWAFHXGQ'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''
 AWS_STORAGE_BUCKET_NAME = 'sonny-skyez'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
