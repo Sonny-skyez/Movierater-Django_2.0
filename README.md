@@ -12,7 +12,7 @@ Project is still evolving to become more useful for me and my friends.
 
 **Login**: guest **Password**: guestguest
 
-![](https://im3.ezgif.com/tmp/ezgif-3-f8dd39b1ce1b.gif)
+![](https://github.com/Sonny-skyez/Movierater-Django_2.0/blob/heroku4/gifs/movie_rater.gif?raw=true)
 
 ## Built With
 

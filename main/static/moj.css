@@ -95,3 +95,10 @@ a:hover {
 .card-body {
     background-color: #f2f2f2;
 }
+
+
+.mb-0 {
+    letter-spacing: 1px;
+    font-family: Gill Sans;
+    font-size: 20;
+}
