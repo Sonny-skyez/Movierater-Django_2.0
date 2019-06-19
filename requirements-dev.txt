@@ -3,6 +3,7 @@ botocore==1.12.169
 dj-database-url==0.5.0
 dj-static==0.0.6
 Django==2.0
+django-author==1.0.2
 django-bootstrap-form==3.4
 django-multiselectfield==0.1.8
 django-storages==1.7.1
@@ -14,6 +15,7 @@ python-dateutil==2.8.0
 python-decouple==3.1
 pytz==2018.7
 s3transfer==0.2.1
+setuptools-git==1.2
 six==1.12.0
 static3==0.7.0
 urllib3==1.25.3
