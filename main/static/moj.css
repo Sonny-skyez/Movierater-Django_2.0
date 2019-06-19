@@ -38,9 +38,11 @@ h2 {
 h3 {
     color: white;
     font-size: 25px;
+    line-height: 35px;
+    font-family: Helvetica;
 }
 
-h3.movie-title {
+h4.movie-title {
     color: black;
     font-size: 30px;
     }
@@ -110,7 +112,8 @@ a:hover {
 
 .reccomend {
     margin-left: auto;
-    margin-right: 10px;
+    margin-right: auto;
+    padding-top: 5px;
     font-size: 25px;
     font-weight: bold;
     color: #FCC127;
@@ -134,5 +137,8 @@ a:hover {
     box-shadow: -3px 3px  3px #888888;
 }
 
-.nav-admin {
+.by-author {
+    margin-right: 70px;
+    margin-left: auto;
+    font-size: 10px;
 }

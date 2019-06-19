@@ -24,7 +24,7 @@
 
       </h1>
         <hr class="my-3">
-        <h3>Polecaj ulubione swoje ulubione filmy całemu światu!<br>
+        <h3>Polecaj swoje ulubione filmy całemu światu!<br>
             I odradzaj to, na co czasu tracić nie warto.
         </h3>
     </div>
@@ -45,28 +45,43 @@
 
               <div class="card-body">
 
-                  <img src="{{ film.photo.url }}">
+                  <div class="row">
 
-                      <div class="row">
-                          <div class="col-sm-11">
-                              <h3 class="movie-title">{{film}}</h3>
+                      <div class="col-md-auto">
+                            <div class="row">
+
+                                <img src="{{ film.photo.url }}">
+
+                            </div>
+
+                            <div class="row recc-row">
+                                <p class="reccomend">{{ film.reccomendation }}</p>
+                            </div>
+
+
+                      </div>
+
+                      <div class="col">
+                          <div class="row">
+                              <div class="col-sm-11">
+                                  <h4 class="movie-title">{{film}}</h4>
+                              </div>
+                              <div class="col-sm-1">
+                                  <a href="{% url 'edytuj_film' film.id %}"><i class="fas fa-edit" style="color:#666666"></i></a>
+                                  <a href="{% url 'usun_film' film.id %}"><i class="fas fa-trash-alt" style="color:#666666"></i></a>
+                              </div>
                           </div>
-                          <div class="col-sm-1">
-                              <a href="{% url 'edytuj_film' film.id %}"><i class="fas fa-edit" style="color:#666666"></i></a>
-                              <a href="{% url 'usun_film' film.id %}"><i class="fas fa-trash-alt" style="color:#666666"></i></a>
+                          <div class="row" style="margin-right: 40px">
+
+                              <p class="desc">{{ film.description }}</p>
+
                           </div>
                       </div>
-                      <div class="row" style="padding-right: 40px">
+                  </div>
 
-                          <p class="desc">{{ film.description }}</p>
-
-                      </div>
-
-                      <div class="row" style="padding-right: 40px">
-                          <p class="reccomend">{{ film.reccomendation }}</p>
-
-
-                      </div>
+                  <div class="row">
+                      <p class="by-author">Pozycja dodana przez użytkownika {{ user.username }}</p>
+                  </div>
 
               </div>
         </div>
