@@ -10,8 +10,6 @@ Apliccation has many functionalities, such as:
 
 Project is still evolving to become more useful for me and my friends.
 
-**Login**: guest **Password**: guestguest
-
 ![](https://github.com/Sonny-skyez/Movierater-Django_2.0/blob/heroku4/gifs/movie_rater.gif?raw=true)
 
 ## Built With
