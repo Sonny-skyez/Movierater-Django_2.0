@@ -2,43 +2,87 @@
 <!doctype html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity=
+        "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin=
+        "anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity=
+        "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin=
+        "anonymous"></script>
+
     <link rel="icon" href="https://sonny-skyez.s3.eu-west-3.amazonaws.com/static/Thumbnails/thumb.jpg">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type='text/css' href="{% static 'moj.css' %}">
     <title>{% block title %} {% endblock %}</title>
+
 </head>
+
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Movie Rater App</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="{% url 'wszystkie_filmy' %}">Strona główna
-              <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="{% url 'nowy_film' %}">Dodaj film</a>
-          <a class="nav-item nav-link" href="https://github.com/Sonny-skyez" target="_blank"
-             rel="noopener noreferrer">GitHub</a>
-          <a class="nav-item nav-link" href="https://github.com/Sonny-skyez/Movierater-Django_2.0"
-             target="_blank" rel="noopener noreferrer">Code!</a>
-          <a class="nav-item nav-link" href="https://www.linkedin.com/in/krzysztof-brymer/"
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'wszystkie_filmy' %}">Movie Rater App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'wszystkie_filmy' %}">Strona główna<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'nowy_film' %}">Nowy film</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            GitHub
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="https://github.com/Sonny-skyez"  style="font-weight: bold"
+            target="_blank" rel="noopener noreferrer">Moje konto</a>
+            <a class="dropdown-item" href="https://github.com/Sonny-skyez/Movierater-Django_2.0"
+            target="_blank" rel="noopener noreferrer">Kod projektu</a>
+            <a class="dropdown-item" href="https://github.com/Sonny-skyez/Py.test_-_Twitter_with_unittests"
+            target="_blank" rel="noopener noreferrer">Twitter with tests</a>
+            <a class="dropdown-item" href="https://github.com/Sonny-skyez/Selenium_test_-_Polls_app"
+               target="_blank" rel="noopener noreferrer">Testy Selenium</a>
+            <a class="dropdown-item" href="https://github.com/Sonny-skyez/Web_Crawler"
+            target="_blank" rel="noopener noreferrer">Web crawler</a>
+            <a class="dropdown-item" href="https://github.com/Sonny-skyez/CSV_Report_Processing"
+            target="_blank" rel="noopener noreferrer">CSV processing</a>
+            <a class="dropdown-item" href="https://github.com/Sonny-skyez/Advent_of_code_2018"
+            target="_blank" rel="noopener noreferrer">Advent of Code</a>
+            <a class="dropdown-item" href="https://github.com/Sonny-skyez/Polls_Django_2.1"
+            target="_blank" rel="noopener noreferrer">Polls - Django</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/krzysztof-brymer/"
              target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a class="nav-item nav-link active" href="https://polls-application.herokuapp.com/polls/" target="_blank"
-             rel="noopener noreferrer">Polls project</a>
-          <a class="nav-item nav-link" href="{% url 'admin:index' %}" style="position: absolute; right: 15px">
-              Admin</a>
-        </div>
-      </div>
-    </nav>
+        <li class="nav-item">
+          <a class="nav-link active" href="https://polls-application.herokuapp.com/polls/"
+             target="_blank" rel="noopener noreferrer">Polls Project</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'admin:index' %}" style="position: absolute; right: 15px">Admin</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 
     {% block body %} {% endblock %}
@@ -63,19 +107,24 @@
             <div class="col-md-6 col-lg-7 text-center text-md-right">
 
               <!-- GitHub -->
-              <a class="fb-ic" href="https://github.com/Sonny-skyez" style="color: black" target="_blank"
-                 rel="noopener noreferrer">
+              <a class="fb-ic" href="https://github.com/Sonny-skyez"
+                 style="color: black; text-decoration: none" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github white-text mr-4"></i>
               </a>
               <!--Linkedin -->
-              <a class="li-ic" href="https://www.linkedin.com/in/krzysztof-brymer/" style="color: black"
-                 target="_blank" rel="noopener noreferrer">
+              <a class="li-ic" href="https://www.linkedin.com/in/krzysztof-brymer/"
+                 style="color: black; text-decoration: none;" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-linkedin-in white-text mr-4"></i>
               </a>
               <!--Instagram-->
-              <a class="ins-ic" href="https://www.instagram.com/ponury_szalbierca/" style="color: black"
-                 target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram white-text"></i>
+              <a class="ins-ic" href="https://www.instagram.com/ponury_szalbierca/"
+                 style="color: black; text-decoration: none;" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram white-text mr-4"></i>
+              </a>
+              <!--Facebook-->
+              <a class="fb-ic" href="https://www.facebook.com/Sonny.Skyez"
+                 style="color: black; text-decoration: none;" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f white-text mr-4"></i>
               </a>
 
             </div>
