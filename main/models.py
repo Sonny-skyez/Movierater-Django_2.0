@@ -1,13 +1,14 @@
 from django.db import models
 from multiselectfield import MultiSelectField
+from author.decorators import with_author
 
 
-CHOICES = ((0, 'Polecam!'),
-           (1, 'Odradzam!')
+CHOICES = (('Yes', 'Polecam!'),
+           ('No', 'Odradzam!')
            )
 
 
-
+@with_author
 class Movie(models.Model):
 
     name = models.CharField(max_length=128)

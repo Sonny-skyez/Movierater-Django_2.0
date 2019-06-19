@@ -4,8 +4,8 @@ from .models import Movie
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
     # fields = ('name', 'description', 'year')
-    list_display = ('name', 'description', 'year')
-    list_filter = ['year','reccomendation', 'name']
+    list_display = ('name', 'year', 'reccomendation', 'author', 'updated_by')
+    list_filter = ['year','reccomendation', 'name', 'author']
     search_fields = ('name', 'description')
 
 

@@ -142,3 +142,7 @@ a:hover {
     margin-left: auto;
     font-size: 10px;
 }
+
+.author-field {
+    text-weight: bold;
+}
