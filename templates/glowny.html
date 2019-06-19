@@ -36,8 +36,8 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse order-1 order-md-0 dual-collapse2" id="navbarNavDropdown">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="{% url 'wszystkie_filmy' %}">Strona główna<span class="sr-only">(current)</span></a>
         </li>
@@ -77,11 +77,14 @@
           <a class="nav-link active" href="https://polls-application.herokuapp.com/polls/"
              target="_blank" rel="noopener noreferrer">Polls Project</a>
         </li>
+      </ul>
+    </div>
+    <div class="navbar-collapse collapse order-1 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link nav-admin" href="{% url 'admin:index' %}">Admin</a>
         </li>
       </ul>
-    </div>
   </nav>
 
 
