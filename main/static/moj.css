@@ -1,4 +1,4 @@
-html, body {
+body {
     background-color: #cccccc;
     height: 100%;
     width: 100%;
@@ -12,6 +12,8 @@ img {
 
 .card {
     width: 100%;
+    box-shadow: -5px 5px  5px #888888;
+    margin-bottom: 20px;
 }
 
 .desc {
@@ -22,6 +24,7 @@ img {
     background-color: #a6a6a6;
     margin-left: 30px;
     margin-right: 30px;
+    box-shadow: -5px 5px  5px #888888;
 }
 
 h1 {
@@ -33,21 +36,34 @@ h2 {
 }
 
 h3 {
-    color: black;
+    color: white;
+    font-size: 25px;
 }
 
-.container {
+h3.movie-title {
+    color: black;
+    font-size: 30px;
+    }
+
+.container-cards {
     width: 70%;
     margin: auto;
-
 }
 
-.card {
-    margin-bottom: 20px;
+.container-login {
+    width: 50%;
+    margin: auto;
+}
+
+.container-form {
+    width: 55%;
+    margin: auto;
 }
 
 .grey-background {
     background-color: #a6a6a6;
+    box-shadow: -2px 2px  2px #888888;
+
 }
 
 .white {
@@ -59,15 +75,19 @@ h3 {
 }
 
 .btn-block {
-    width: 800px;
+    width: 100%;
     margin-bottom:10px;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
+    box-shadow: -5px 5px  5px #888888;
+    color: #404040;
 }
 
 .alert {
     margin-left: 30px;
     margin-right: 30px;
+    box-shadow: -5px 5px  5px #888888;
+
 }
 
 .row {
@@ -95,16 +115,24 @@ a:hover {
     font-weight: bold;
     color: #FCC127;
     letter-spacing: 2px;
-    text-shadow: 1px 1px #ff9933;
+    text-shadow: -1px 1px #ff9933;
 }
 
 .card-body {
     background-color: #f2f2f2;
+
 }
 
 
 .mb-0 {
     letter-spacing: 1px;
     font-family: Gill Sans;
-    font-size: 20;
+    font-size: 20px;
+}
+
+.b-login {
+    box-shadow: -3px 3px  3px #888888;
+}
+
+.nav-admin {
 }

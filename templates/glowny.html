@@ -78,7 +78,7 @@
              target="_blank" rel="noopener noreferrer">Polls Project</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'admin:index' %}" style="position: absolute; right: 15px">Admin</a>
+          <a class="nav-link nav-admin" href="{% url 'admin:index' %}">Admin</a>
         </li>
       </ul>
     </div>
@@ -185,17 +185,20 @@
             <!-- Links -->
             <h6 class="text-uppercase font-weight-bold">Linki</h6>
             <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
             <p>
               <a class="footer_links" href="{% url 'wszystkie_filmy' %}">
                 Strona główna</a>
             </p>
+
+            <p>
+              <a class="footer_links" href="{% url 'admin:index' %}">
+                Panel admin</a>
+            </p>
+
             <p>
               <a class="footer_links" href="https://intl.startrek.com/" target="_blank"
                  rel="noopener noreferrer">Star Trek Official</a>
-            </p>
-            <p>
-              <a class="footer_links" href="https://www.wykop.pl/" target="_blank" rel="noopener noreferrer">
-                Wykop.pl</a>
             </p>
 
           </div>

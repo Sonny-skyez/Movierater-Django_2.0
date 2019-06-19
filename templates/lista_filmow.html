@@ -6,36 +6,36 @@
 {% block body %}
 
 
-    <div class="jumbotron">
+    <div class="jumbotron text-center">
       <h1 class="display-4">
           {% if user.is_authenticated %}
 
               Witam, {{ user.username }}
-            <a class="btn btn-light btn-lg" href="{% url 'logout' %}" style="padding: 15px; color: #8c8c8c">
+            <a class="btn btn-light btn-lg b-login" href="{% url 'logout' %}" style="padding: 15px; color: #8c8c8c">
                 Wyloguj się</a>
 
           {% else %}
 
             Movie Rater App
-            <a class="btn btn-light btn-lg" href="{% url 'login' %}" style="padding: 15px; color: #8c8c8c">
+            <a class="btn btn-light btn-lg b-login" href="{% url 'login' %}" style="padding: 15px; color: #8c8c8c">
                 Zaloguj się</a>
 
           {% endif %}
 
       </h1>
         <hr class="my-3">
-        <h3 style="color: #666666">Aplikacja służąca do dodawania pozycji filmowych wraz z ich recenzją/opisem,
-            datą premiery oraz artworkami - które przechowywane są na serverze S3 Amazona.<br>Have fun!
+        <h3>Polecaj ulubione swoje ulubione filmy całemu światu!<br>
+            I odradzaj to, na co czasu tracić nie warto.
         </h3>
     </div>
 
 
 
-    <div class="container">
+    <div class="container-cards">
 
         <a href="{% url 'nowy_film' %}" class="btn btn-warning btn-lg btn-block">
-        <i class="fas fa-plus-square" style=
-        "margin-right: 10px"></i> Dodaj film <i class="fas fa-plus-square" style=
+        <i class="far fa-plus-square" style=
+        "margin-right: 10px"></i> Dodaj film <i class="far fa-plus-square" style=
         "margin-left: 10px"></i></a>
 
 
@@ -49,7 +49,7 @@
 
                       <div class="row">
                           <div class="col-sm-11">
-                              <h3>{{film}}</h3>
+                              <h3 class="movie-title">{{film}}</h3>
                           </div>
                           <div class="col-sm-1">
                               <a href="{% url 'edytuj_film' film.id %}"><i class="fas fa-edit" style="color:#666666"></i></a>

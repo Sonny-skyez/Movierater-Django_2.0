@@ -6,16 +6,19 @@
 
 {% block body %}
 
-    <div class="card" style="width: 600px;">
-      <div class="card-body">
-          <h5 class="card-title">Zaloguj sie</h5>
-        <form method="post">
-            {% csrf_token %}
-            {{ form|bootstrap }}
-            <button type="submit" class="btn btn-primary">Login <i class="fas fa-sign-in-alt"></i></button>
+    <div class="container-login">
 
-        </form>
-      </div>
+        <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Zaloguj sie</h5>
+            <form method="post">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                <button type="submit" class="btn btn-light grey-background white">Login <i class="fas fa-sign-in-alt"></i></button>
+
+            </form>
+          </div>
+        </div>
     </div>
 
 {% endblock %}

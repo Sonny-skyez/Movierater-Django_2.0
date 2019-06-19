@@ -6,17 +6,21 @@
 
 {% block body  %}
 
-    <div class="card" style="width: 600px;">
-      <div class="card-body">
-          <h5 class="card-title">Zapisz film</h5>
-        <form role="role" method= "post" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form|bootstrap }}
-            <a href="{% url 'wszystkie_filmy' %}" style="color: #666666">Cofnij <i class="fas fa-arrow-circle-left" style="color: #666666"></i></a>
-            <button type="submit" class="btn btn-light grey-background white" style="margin-left: 10px">Zapisz <i class="fas fa-plus-circle"></i></button>
+    <div class="container-form">
 
-        </form>
-      </div>
+        <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Zapisz film</h5>
+            <form role="role" method= "post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                <a href="{% url 'wszystkie_filmy' %}" style="color: #666666">Cofnij <i class="fas fa-arrow-circle-left" style="color: #666666"></i></a>
+                <button type="submit" class="btn btn-light grey-background white" style="margin-left: 10px">Zapisz <i class="fas fa-plus-circle"></i></button>
+
+            </form>
+          </div>
+        </div>
+
     </div>
 
 {% endblock %}
